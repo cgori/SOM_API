@@ -1,3 +1,4 @@
+
 const config = require('../../config');
 
 const JWT = require('jsonwebtoken');
@@ -9,7 +10,10 @@ middleware.protected = (req, res, next) => {
 
     JWT.verify(token, config.jwt.secret, (error, data) => {
         if (error) {
-            return res.status(403).json({ success: false, message: 'Not Authorized.', token: token ?? "No token" });
+            const value = token;
+            console.error("headers" + JSON.stringify(req.headers))
+
+            return res.status(403).json({ success: false, message: 'Not Authorized.', token: value });
         }
 
         next();
