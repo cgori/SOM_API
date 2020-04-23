@@ -1,0 +1,21 @@
+{
+    "name": "cq",
+    "private": true,
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.7.12",
+        "mongoose-auto-increment": "^5.0.1",
+        "validator": "^12.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.7.1",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "prettier": "^1.19.1"
+    }
+}
