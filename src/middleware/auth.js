@@ -9,7 +9,7 @@ middleware.protected = (req, res, next) => {
 
     JWT.verify(token, config.jwt.secret, (error, data) => {
         if (error) {
-            return res.status(403).json({ success: false, message: 'Not Authorized.' });
+            return res.status(403).json({ success: false, message: 'Not Authorized.', token: token ?? "No token" });
         }
 
         next();
