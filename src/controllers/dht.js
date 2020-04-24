@@ -10,7 +10,7 @@ controller.getAllResults = async (req, res, next) => {
 
 controller.submitResults = async (req, res, next) => {
     const results = await repository.submitResults(req.body);
-
+    console.log(req.body)
     res.json({ success: true, results });
 };
 
