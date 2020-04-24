@@ -1,3 +1,4 @@
+
 const repository = require('../repository/dht');
 
 const controller = {};
@@ -11,7 +12,7 @@ controller.getAllResults = async (req, res, next) => {
 controller.submitResults = async (req, res, next) => {
     const results = await repository.submitResults(req.body);
     console.log(req.body)
-    res.json({ success: true, results });
+    res.json(Date.now());
 };
 
 controller.deleteByID = async (req, res, next) => {
